@@ -1,0 +1,861 @@
+/*---Begin media queries---*/
+@media (max-width: 1400px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1350px) {
+    html {
+        font-size: 15.5px;
+    }
+}
+
+@media (max-width: 1300px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 1250px) {
+    html {
+        font-size: 14.5px;
+    }
+}
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1150px) {
+    html {
+        font-size: 13.5px;
+    }
+}
+
+@media (max-width: 1100px) {
+    html {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 1050px) {
+    html {
+        font-size: 12.5px;
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .review-pop-up__close svg {
+        fill: #343434;
+    }
+
+    .text {
+        font-size: 16px;
+    }
+
+    .logo-hor__text {
+        display: none;
+    }
+
+    .logo-hor__desc {
+        display: none;
+    }
+
+    .logo-hor_hidden {
+        display: flex;
+    }
+
+
+    .logo-hor_l {
+        position: static;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+    }
+
+    .burger-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-left: 1px solid #E4E4E4;
+    }
+
+    .head-page__burger-menu {
+        margin-right: -16px;
+    }
+
+    .head-page__services-menu {
+        display: none;
+    }
+
+    .head-page__top {
+        display: none;
+    }
+
+    .head-page__bottom {
+        padding: 0;
+    }
+
+    .head-page__bottom .logo-hor__text {
+        display: block;
+        padding-left: 8px;
+        padding-right: 0;
+    }
+
+    .logo-hor__text strong {
+        font-size: 18px;
+    }
+
+    .logo-hor__text span {
+        font-size: 8px;
+    }
+
+    .logo-hor__text::after {
+        display: none;
+    }
+
+    .logo-hor img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .make-an-appointment {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-left: 1px solid #E4E4E4;
+    }
+
+    .make-an-appointment svg {
+        width: 19px;
+        height: 19px;
+        margin-right: 0;
+        stroke: #999999;
+    }
+
+    .make-an-appointment span {
+        display: none;
+    }
+
+    .call-us {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-left: 1px solid #E4E4E4;
+    }
+
+    .call-us svg {
+        width: 22px;
+        height: 21px;
+        stroke: #999999;
+    }
+
+    .services-menu_column {
+        -webkit-column-gap: 30px;
+        column-gap: 30px;
+    }
+
+    .benefits__label {
+        font-size: 18px;
+    }
+
+    .benefits__text {
+        font-size: 14px;
+    }
+
+    .benefits__text br {
+        display: none;
+    }
+
+    .benefits__img_man {
+        width: 47px;
+        height: 60px;
+    }
+
+    .benefits__col {
+        width: 100%;
+    }
+
+    .benefits__col:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    .sertificates__list {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .sertificates__thumb {
+        margin: 0 auto;
+    }
+
+    .contacts-section__row {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .contacts-section__map {
+        width: 100%;
+        max-width: 390px;
+    }
+
+    .contacts-section__text {
+        padding-left: 10px;
+        margin: 0;
+    }
+
+    .review__part_left {
+        min-width: 300px;
+    }
+
+    .review__part_right {
+        width: 100%;
+    }
+
+    .review__text {
+        font-size: 14px;
+    }
+
+    .reviews__list {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .review-pop-up {
+        height: auto;
+    }
+
+    .review-pop-up__inner {
+        flex-wrap: wrap;
+    }
+
+    .review-pop-up__left {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .review-pop-up__right {
+        width: 100%;
+        height: 100vh;
+        background-position-y: bottom;
+        align-items: flex-start;
+    }
+
+    .review-pop-up_feedback .review-pop-up__right {
+        display: none;
+    }
+
+    .review-pop-up__half {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .float-block {
+        margin: 0;
+    }
+
+    .leave-review {
+        width: 320px;
+    }
+
+    .leave-review__btn-fill {
+        width: 100%;
+    }
+
+    .team-inner__doctor-info {
+        width: 100%;
+    }
+
+    .team-inner__row {}
+
+    .team-inner__doctor-info {
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+        order: 2;
+    }
+
+    .team-inner__doctor-avatar {
+        position: relative !important;
+        width: 100%;
+        left: auto;
+        bottom: auto;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1;
+    }
+
+    .service-inner .float-block {
+        display: none;
+    }
+
+    .service-inner__body {
+        width: 100%;
+    }
+
+    .service-inner__btn-fixed {
+        display: block;
+    }
+
+    .foot-page__services-menu {
+        margin-left: 50px;
+    }
+
+    .policy {
+        margin-left: 30px;
+    }
+
+    .success-page__logo {
+        width: 50px;
+        height: 50px;
+        margin: 0 auto 1.875rem auto;
+    }
+
+    .success-page__logo img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .success-page__left {
+        display: none;
+    }
+
+    .success-page__right {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .success-page .socials {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .success-page .socials__item_inst {
+        margin-right: 0;
+    }
+
+    .socials__text {
+        display: block;
+        width: 100%;
+
+        margin-top: 30px;
+    }
+
+    .socials__text br {
+        display: none;
+
+    }
+
+    .sertifaicates__list {
+        width: 100%;
+        max-width: 435px;
+        margin-left: auto;
+    }
+
+    .files-upload {
+        justify-content: flex-start;
+    }
+
+    .files-upload__label {
+        margin-right: 1.875rem;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .sertificates__desc {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+
+
+}
+
+@media screen and (max-width: 700px) {
+    .display_size_big {
+        font-size: 24px;
+    }
+
+    .display_size_middle {
+        font-size: 20px;
+    }
+
+    .review__date {
+        font-size: 14px;
+    }
+
+    .review__gallery-slide {
+        width: 63px;
+        height: 38px;
+    }
+
+    .btn-fill {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    .make-an-appointment_border {
+        height: 60px;
+        padding: 0 55px;
+    }
+
+    .make-an-appointment {
+        font-size: 16px;
+    }
+
+    .nav-menu>ul>li>a{
+        font-size: 16px;
+    }
+
+    .form__group_mb {
+        margin-bottom: 20px;
+    }
+
+    .review-pop-up__title {
+        margin-bottom: 20px;
+    }
+
+    .review-pop-up__action {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+    }
+
+    .review-pop-up__action .form__policy {
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .review-pop-up__action .form__policy br {
+        display: none;
+    }
+
+    .review-pop-up__btn-fill {
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+        order: 2;
+    }
+
+    .review-pop-up__textarea {
+        height: 150px;
+    }
+
+    .review {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .review__part {
+        width: 100%;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+
+    }
+
+    .review__part_left {
+        padding: 20px;
+    }
+
+    .review__part_right {
+        padding: 20px;
+    }
+
+    .review__part_right {
+        border: none;
+    }
+
+    .contacts-section__row {
+        justify-content: flex-start;
+    }
+
+    .contacts-section__map {
+        width: 100%;
+        max-width: 100%;
+        order: 2;
+    }
+
+    .contacts-section__text {
+        width: 100%;
+        padding: 0 0 30px 0;
+        order: 1;
+    }
+
+    .contacts-section__contact-phone {
+        font-size: 16px;
+    }
+
+    .contacts-section__address {
+        font-size: 16px;
+    }
+
+    .time {
+        font-size: 16px;
+    }
+
+    .socials {
+        font-size: 16px;
+    }
+
+    .socials__item svg {
+        width: 60px;
+        height: 60px;
+    }
+
+    .logo-vert__img {
+        width: 100%;
+        height: auto;
+    }
+
+    .service-slider {
+        width: 100%;
+    }
+
+    .service-inner__desc br {
+        display: none;
+    }
+
+    .doctors {
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .doctors__text {
+        width: 100%;
+        padding-left: 0;
+        order: 1;
+        margin-bottom: 30px;
+    }
+
+    .doctors__text br {
+        display: none;
+    }
+
+    .doctors__slider-wrapper {
+        width: 275px;
+        order: 2;
+    }
+
+    .foot-page__logo {
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .foot-page__services-menu {
+        width: 100%;
+        margin: 0;
+        -webkit-column-count: 1;
+        column-count: 1;
+        text-align: center;
+    }
+
+    .services-menu>ul>li>a {
+        font-size: 16px;
+    }
+
+    .foot-page__top {
+        padding: 60px 0;
+    }
+
+    .foot-page__right {
+        margin: 0 auto;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .foot-page__contact-phone {
+        font-size: 16px;
+    }
+
+    .foot-page__time {
+        font-size: 16px;
+    }
+
+    .foot-page__bottom {
+        text-align: center;
+    }
+
+    .copy {
+        width: 100%;
+        margin-bottom: 30px;
+        font-size: 16px;
+    }
+
+    .policy {
+        width: 100%;
+        margin-bottom: 30px;
+        margin-left: 0;
+        font-size: 16px;
+    }
+
+    .design-dev {
+        width: 100%;
+        margin: 0;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .head-page__logo {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .head-page__logo img {
+        margin: 0 auto;
+    }
+
+    .head-page__contact-phone {
+        margin: 0;
+    }
+
+    .head-page__contact-phone,
+    .head-page__time {
+        width: 50%;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .leave-review,
+    .float-block {
+        width: 100%;
+    }
+
+    .team-inner__row {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+    .team-section__item {
+        width: 100%;
+    }
+
+    .doctor-card {
+        min-width: 100%;
+    }
+
+    .doctor-card__thumb {
+        height: auto;
+        padding-bottom: 100%;
+    }
+
+    .doctor-card__thumb img {
+        height: 90%;
+    }
+
+    .doctor-info {
+        padding: 30px 20px;
+    }
+
+    .doctor-info__text br {
+        display: none;
+    }
+
+    .team-inner__doctor-info {
+        border-radius: 0;
+    }
+
+
+    .team-inner__doctor-avatar {
+        padding: 0 20px;
+    }
+
+    .price {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .price__name {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .price__value {
+        margin-left: 0;
+    }
+
+    .price__btn {
+        margin-left: auto;
+    }
+
+    .contact-us {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .contact-us__mess {
+        display: block;
+        margin: 0 auto 30px auto;
+        text-align: left;
+    }
+
+    .contact-us__socials {
+        width: 100%;
+        margin: 30px 0 0 0;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+
+    .contact-us__text {
+        margin-left: 0;
+    }
+
+    .contact-us__text br {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .carousel-section__title {
+        font-size: 25px;
+    }
+
+
+    .mobile-menu__nav {
+        width: 100%;
+    }
+
+    .close {
+        top: 15px;
+        right: 15px;
+    }
+
+    .review-pop-up__left {
+        padding: 40px 20px;
+    }
+
+    .review-pop-up__btn-fill {
+        width: 100%;
+    }
+
+    .cart__right,
+    .cart__left {
+        padding: 40px 20px;
+    }
+
+    .review__logo {
+        display: none;
+    }
+
+    .review__hero {
+        padding-left: 0;
+    }
+
+    .leave-review {
+        padding: 40px 20px;
+    }
+
+    .leave-review__btn-fill {
+        width: 100%;
+    }
+
+    .contacts-section__btn-fill {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: 60px;
+    }
+
+    .sertificates__thumb {
+        max-width: 100%;
+        height: 0;
+        padding-bottom: 100%;
+    }
+
+    .sertificates__item {
+        width: 175px;
+        height: 230px;
+    }
+
+    .doctors-slider {
+        width: 100%;
+    }
+
+    .doctor-info__sertifaicate-list .swiper-slide {
+        width: 175px;
+    }
+
+    .doctor-info__sertifaicate {
+        width: 100%;
+    }
+
+    .fancybox-slide {
+        padding: 0;
+    }
+
+    .doctor-avatar {
+        height: 400px;
+    }
+
+    .doctor-avatar img {
+        width: 290px;
+    }
+
+    .doctors__slider-wrapper {
+        width: 100%;
+    }
+
+    .team-section__head {
+        margin-bottom: 20px;
+    }
+
+    .team-section__title {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .team-section__controls .slider-control_prev {
+        margin-left: -8px;
+    }
+
+    .team-section__controls .slider-control_next {
+        margin-right: -8px;
+    }
+
+    .contact-us {
+        padding: 30px 20px;
+    }
+
+    .contacts-section__map {
+        height: 300px;
+    }
+}
