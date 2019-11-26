@@ -14,7 +14,7 @@ $message .= "\nРейтинг: ".$_POST['rating'];
 
 $mail->setFrom('filonenko0406@gmail.com', 'Your Name');
 $mail->addAddress('filonenko0406@gmail.com', 'My Friend');
-$mail->Subject  = 'Отзык с сайта Лечись';
+$mail->Subject  = 'Отзыв с сайта Лечись';
 $mail->Body     = $message;
 $mail->addAttachment($_FILES['photo_1']['tmp_name'], $_FILES['photo_1']['name']);
 $mail->addAttachment($_FILES['photo_2']['tmp_name'], $_FILES['photo_1']['name']);
