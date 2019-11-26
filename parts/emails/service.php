@@ -28,14 +28,4 @@
 
 	add_action('wp_ajax_nopriv_service', 'getServiceForm' );
 	add_action('wp_ajax_service', 'getServiceForm' );
-
-	function testReview(){
-		parse_str($_POST['data'], $data);
-
-		print_r($_POST);
-		print_r($_FILES);
-	}
-
-	add_action('wp_ajax_nopriv_ajax_review', 'testReview' );
-	add_action('wp_ajax_ajax_review', 'testReview' );
 ?>

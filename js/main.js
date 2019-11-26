@@ -466,14 +466,10 @@ $(function () {
       var http = new XMLHttpRequest(), f = this;
       var th = $(this);
       evt.preventDefault();
-      console.log('hui');
       http.open("POST", "/wp-content/themes/treat-yourself/parts/emails/review.php", true);
       http.onreadystatechange = function() {
         if (http.readyState == 4 && http.status == 200) {
-          alert(http.responseText);
-          if (http.responseText.indexOf(f.nameFF.value) == 0) { // очистить поля формы, если в ответе первым словом будет имя отправителя (nameFF)
-            th.trigger("reset");
-          }
+          window.location.replace("/cпасибо/");
         }
       };
       http.onerror = function() {
@@ -698,7 +694,8 @@ function addPost(time, data) {
     }
   };
 
-  var comment = "Направление: "+ data.specializaciya + ';';
+  var comment = "Имя: "+ data.name;
+      comment += "Направление: "+ data.specializaciya + ';';
       comment += 'Доктор: ' + data.specialist + ';';
       comment += 'Услуга: ' + data.serviceType + ';';
       comment += 'Дата: ' + data.date + ';';
