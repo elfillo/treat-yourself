@@ -1,5 +1,5 @@
 <?php
-	use PHPMailer\PHPMailer\PHPMailer;
+/*	use PHPMailer\PHPMailer\PHPMailer;
 	use PHPMailer\PHPMailer\Exception;
 
 	require '../libs/PHPMailer/src/Exception.php';
@@ -48,4 +48,4 @@
 
 	add_action('wp_ajax_nopriv_service', 'getServiceForm' );
 	add_action('wp_ajax_service', 'getServiceForm' );
-?>
+*/?>
