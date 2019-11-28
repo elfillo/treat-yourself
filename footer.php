@@ -34,25 +34,33 @@
                     <!-- End nav-menu -->
 
                     <div class="row row_align_center foot-page__contacts">
-                        <a href="tel:84912300317" class="contact-phone foot-page__contact-phone">
+                        <a href="tel:<?php the_field('contacts_phone_link', 21)?>" class="contact-phone foot-page__contact-phone">
                             <svg class="icon" width="14" height="14" viewBox="0 0 16 16">
-                                <use xlink:href="img/symbol_sprite.svg#icon-phone"></use>
+                                <use xlink:href="<?php echo get_template_directory_uri() ?>/img/symbol_sprite.svg#icon-phone"></use>
                             </svg>
-                            +7 (4912) 300‒317
+	                        <?php the_field('contacts_phone', 21)?>
                         </a>
 
                         <div class="time foot-page__time">
                             <svg class="icon" width="14" height="14" viewBox="0 0 16 16">
-                                <use xlink:href="img/symbol_sprite.svg#icon-time"></use>
+                                <use xlink:href="<?php echo get_template_directory_uri() ?>/img/symbol_sprite.svg#icon-time"></use>
                             </svg>
-                            10<sup>00</sup>-&nbsp;23<sup>00</sup>
+	                        <?php
+                                $start = get_post_meta(21, 'contacts_start', true);
+                                $startH = explode(':', $start)[0];
+                                $startM = explode(':', $start)[1];
+                                $finish = get_post_meta(21, 'contacts_finish', true);
+                                $finishH = explode(':', $finish)[0];
+                                $finishM = explode(':', $finish)[1];
+	                        ?>
+	                        <?php echo $startH.'<sup>'.$startM.'</sup>'.' - '.$finishH . '<sup>'.$finishM.'</sup>'; ?>
                         </div>
                     </div>
 
                     <button class="make-an-appointment make-an-appointment_border" data-options='{"touch" : false}'
                             data-fancybox data-src="#feedback">
                         <svg class="icon" width="14" height="14" viewBox="0 0 16 16">
-                            <use xlink:href="img/symbol_sprite.svg#icon-time"></use>
+                            <use xlink:href="<?php echo get_template_directory_uri() ?>/img/symbol_sprite.svg#icon-time"></use>
                         </svg>
                         Записаться на прием
                     </button>

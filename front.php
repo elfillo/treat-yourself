@@ -166,7 +166,8 @@ Template Name: Главная
 
                 <div class="row reviews__row">
                     <ul class="reviews__list">
-                        <?php foreach ($reviews as $review):?>
+                        <?php foreach ($reviews as $key => $review):?>
+	                        <?php $galleryKey = 'gallary'.$key?>
                         <li class="reviews__item">
                             <!-- Begin review-->
                             <article class="review">
@@ -193,11 +194,15 @@ Template Name: Главная
                                     </div>
 
                                     <div class="review__gallery">
-				                        <?php foreach (get_field('review_photo', $review->ID) as $img):?>
-                                            <a href="<?php echo wp_get_attachment_image_src($img, 'full')[0]?>" data-fancybox="gallary1" class="review__gallery-slide">
+	                                    <?php foreach (get_field('review_photo', $review->ID) as $img):?>
+		                                    <?php
+		                                    $attachment = get_post( $img );
+		                                    $href = strlen($attachment->post_excerpt) > 0 ? $attachment->post_excerpt  : wp_get_attachment_image_src($img, 'full')[0];
+		                                    ?>
+                                            <a href="<?php echo $href?>" data-fancybox="<?php echo $galleryKey?>" class="review__gallery-slide">
                                                 <img src="<?php echo wp_get_attachment_image_src($img, 'full')[0]?>">
                                             </a>
-				                        <?php endforeach;?>
+	                                    <?php endforeach;?>
                                     </div>
                                 </div>
                             </article>
@@ -240,18 +245,18 @@ Template Name: Главная
                         <h2 class="display display_size_big contacts-section__title">
                             Контакты
                         </h2>
-                        <a href="tel:84912300317" class="contact-phone contacts-section__contact-phone">
+                        <a href="tel:<?php the_field('contacts_phone_link', 21)?>" class="contact-phone contacts-section__contact-phone">
                             <svg class="icon" width="14" height="14" viewBox="0 0 16 16">
                                 <use xlink:href="<?php echo get_template_directory_uri() ?>/img/symbol_sprite.svg#icon-phone"></use>
                             </svg>
-                            +7 (4912) 300‒317
+						    <?php the_field('contacts_phone', 21)?>
                         </a>
 
                         <div class="address contacts-section__address">
                             <svg class="icon" width="15" height="20" viewBox="0 0 17 22">
                                 <use xlink:href="<?php echo get_template_directory_uri() ?>/img/symbol_sprite.svg#icon-pin"></use>
                             </svg>
-                            Московский округ, Рязань, <br>Крупской, 25
+						    <?php the_field('contacts_address', 21)?>
                         </div>
 
                         <div class="time contacts-section__time">
@@ -259,17 +264,28 @@ Template Name: Главная
                                 <use xlink:href="<?php echo get_template_directory_uri() ?>/img/symbol_sprite.svg#icon-time"></use>
                             </svg>
                             Режим работы -
-                            10<sup>00</sup>-&nbsp;23<sup>00</sup>
+						    <?php
+						    $start = get_post_meta(21, 'contacts_start', true);
+						    $startH = explode(':', $start)[0];
+						    $startM = explode(':', $start)[1];
+						    $finish = get_post_meta(21, 'contacts_finish', true);
+						    $finishH = explode(':', $finish)[0];
+						    $finishM = explode(':', $finish)[1];
+
+						    ?>
+						    <?php
+						    echo $startH.'<sup>'.$startM.'</sup>'.' - '.$finishH . '<sup>'.$finishM.'</sup>';
+						    ?>
                         </div>
 
                         <div class="socials contacts-section__socials">
-                            <a href="/" class="socials__item socials__item_vk">
+                            <a href="<?php the_field('contacts_vk', 21)?>" class="socials__item socials__item_vk">
                                 <svg class="icon" viewBox="0 0 80 80">
                                     <use xlink:href="<?php echo get_template_directory_uri() ?>/img/symbol_sprite.svg#icon-vk"></use>
                                 </svg>
                             </a>
 
-                            <a href="/" class="socials__item socials__item_inst">
+                            <a href="<?php the_field('contacts_inst', 21)?>" class="socials__item socials__item_inst">
                                 <svg class="icon" viewBox="0 0 80 80">
                                     <use xlink:href="<?php echo get_template_directory_uri() ?>/img/symbol_sprite.svg#icon-inst"></use>
                                 </svg>

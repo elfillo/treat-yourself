@@ -38,6 +38,10 @@ Template Post Type: post_doctor
                     </div>
                     <div class="doctor-info__desc">
 	                    <?php the_field('doctor_skills', $post->ID)?>
+                        <?php
+                            $serts = get_field('doctor_certificates', $post->ID);
+                        ?>
+                        <?php if(!empty($serts)):?>
                         <h2 class="doctor-info__education-name doctor-info__education-name_sertificate">
                             Сертификаты 
                         </h2>
@@ -53,6 +57,7 @@ Template Post Type: post_doctor
                                 <?php endforeach;?>
                             </div>
                         </div>
+                        <?php endif;?>
                         <button class="btn-fill doctor-info__btn" data-options='{"touch" : false}'
                             data-fancybox data-src="#feedback">
                             Записаться на прием онлайн

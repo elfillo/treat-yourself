@@ -1649,7 +1649,7 @@ li {
 .input::-webkit-input-placeholder {
   font-family: 'ProximaNova', sans-serif;
   font-size: 1rem;
-  color: #A69895;
+  color: #C3C5D0;
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
@@ -1658,7 +1658,7 @@ li {
 .input:-ms-input-placeholder {
   font-family: 'ProximaNova', sans-serif;
   font-size: 1rem;
-  color: #A69895;
+  color: #C3C5D0;
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
@@ -1667,7 +1667,7 @@ li {
 .input::-ms-input-placeholder {
   font-family: 'ProximaNova', sans-serif;
   font-size: 1rem;
-  color: #A69895;
+  color: #C3C5D0;
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
@@ -1676,7 +1676,7 @@ li {
 .input::placeholder {
   font-family: 'ProximaNova', sans-serif;
   font-size: 1rem;
-  color: #A69895;
+  color: #C3C5D0;
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
@@ -2359,6 +2359,7 @@ li {
 }
 
 .doctor-card__thumb {
+  overflow: hidden;
   height: 23.3125rem;
   position: relative;
   background-image: url(../img/svg/slide-pattern.svg);
@@ -2672,12 +2673,15 @@ li {
   display: none;
   z-index: 30;
 }
-
+.service-inner__desc{
+    padding-bottom: 2.5rem;
+}
 .symptoms {
   counter-reset: li;
   padding: 0;
   list-style: none;
-  padding: 2.5rem 0 5rem;
+  /*padding: 2.5rem 0 5rem;*/
+    padding-bottom: 2.5rem;
 }
 
 .symptoms__item {
@@ -3070,6 +3074,7 @@ li {
 }
 
 .reviews_page {
+  background-color: #F4F5F9;
   padding: 2.5rem 0 6.25rem 0;
 }
 
@@ -3429,14 +3434,17 @@ li {
 .files-upload {
   display: flex;
   justify-content: flex-start;
+  justify-content: space-between;
 }
 
 .files-upload__label {
   width: 4rem;
   height: 2.5rem;
-  margin-right: 1.875rem;
 
-  background: #F6F6F6;
+  background-image: url(../img/svg/upload.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #F6F6F6;
   border: 1px solid #EFF0F6;
   -webkit-box-shadow: inset 0px 0.1875rem 0.3125rem rgba(242, 241, 241, 0.5);
   box-shadow: inset 0px 0.1875rem 0.3125rem rgba(242, 241, 241, 0.5);
@@ -3447,8 +3455,6 @@ li {
 
 .files-upload__label.has-file {
   background-image: url(../img/svg/check-file.svg);
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .badge {

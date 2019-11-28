@@ -219,11 +219,11 @@ $(function () {
     var valStars = $(item).data('rating-count');
 
     for (var i = 0; i < valStars; i++) {
-      $(item).append('<svg class="icon rating__icon" width="12" height="12" viewBox="0 0 12 12"><use xlink:href="wp-content/themes/treat-yourself/img/symbol_sprite.svg#icon-star-f"></use></svg>')
+      $(item).append('<svg class="icon rating__icon" width="12" height="12" viewBox="0 0 12 12"><use xlink:href="/wp-content/themes/treat-yourself/img/symbol_sprite.svg#icon-star-f"></use></svg>')
     }
 
     for (var i = 0; i < 5 - valStars; i++) {
-      $(item).append('<svg class="icon rating__icon" width="12" height="12" viewBox="0 0 12 12"><use xlink:href="wp-content/themes/treat-yourself/img/symbol_sprite.svg#icon-star-t"></use></svg>')
+      $(item).append('<svg class="icon rating__icon" width="12" height="12" viewBox="0 0 12 12"><use xlink:href="/wp-content/themes/treat-yourself/img/symbol_sprite.svg#icon-star-t"></use></svg>')
     }
   });
 

@@ -27,4 +27,6 @@ require_once ('parts/admin/helpers.php');
 require_once ('parts/admin/post_types.php');
 require_once ('parts/emails/service.php');
 require_once ('parts/admin/ajax.php');
+require_once ('parts/admin/shortcodes.php');
+
 ?>

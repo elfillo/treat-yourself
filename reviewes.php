@@ -33,7 +33,8 @@ Template Name: Отзывы
 		                'post_type' => 'post_review'
 	                ));
 	                ?>
-	                <?php foreach ($reviews as $review):?>
+	                <?php foreach ($reviews as $key => $review):?>
+                    <?php $galleryKey = 'gallary'.$key?>
                     <li class="reviews__item">
                         <!-- Begin review-->
                         <article class="review">
@@ -61,7 +62,11 @@ Template Name: Отзывы
 
                                 <div class="review__gallery">
 	                                <?php foreach (get_field('review_photo', $review->ID) as $img):?>
-                                    <a href="<?php echo wp_get_attachment_image_src($img, 'full')[0]?>" data-fancybox="gallary1" class="review__gallery-slide">
+                                    <?php
+		                                $attachment = get_post( $img );
+		                                $href = strlen($attachment->post_excerpt) > 0 ? $attachment->post_excerpt  : wp_get_attachment_image_src($img, 'full')[0];
+                                    ?>
+                                    <a href="<?php echo $href?>" data-fancybox="<?php echo $galleryKey?>" class="review__gallery-slide">
                                         <img src="<?php echo wp_get_attachment_image_src($img, 'full')[0]?>">
                                     </a>
                                     <?php endforeach;?>

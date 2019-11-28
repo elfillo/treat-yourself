@@ -12,7 +12,11 @@
 		$date = $data['date'];
 		$time = $data['time'];
 
-		$to      = 'filonenko0406@gmail.com';
+		$headers  = "Content-type: text/html; charset=utf-8 \r\n";
+		$headers .= "From: От кого письмо <from@example.com>\r\n";
+		$headers .= "Reply-To: kopelev.i@yandex.ru\r\n";
+
+		$to      = 'kopelev.i@yandex.ru';
 		$subject = 'Новая запись с сайта';
 		$message = '';
 		$message .= 'Пользователь по имени '.$name.$newLine;
@@ -23,7 +27,7 @@
 		$message .= 'Дата: ' . $date . $newLine;
 		$message .= 'Время:' . $time . $newLine;
 
-		mail($to, $subject, $message);
+		mail($to, $subject, $message, $headers);
 	}
 
 	add_action('wp_ajax_nopriv_service', 'getServiceForm' );
