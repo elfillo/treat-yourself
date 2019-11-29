@@ -9,16 +9,20 @@ add_shortcode( 'trueurl', 'true_url_external' );
 
 function getTextBlock($atts, $shortcode_content = null) {
 	$params = shortcode_atts( array(
-		'title' => 'Заголовок'
+		'title' => ''
 	), $atts );
 
 	$html = '';
 
 	$html .= "<div class='service-inner__desc'>";
-	$html .= "<h2 class='service-inner__title'>{$params['title']}</h2>";
-	$html .= "<div class='text'><p>";
-	$html .= do_shortcode($shortcode_content);
-	$html .= "</div></p>";
+	if(strlen($params['title']) > 0){
+		$html .= "<h2 class='service-inner__title'>{$params['title']}</h2>";
+	}
+	if(strlen(do_shortcode($shortcode_content)) > 0){
+		$html .= "<div class='text'><p>";
+		$html .= do_shortcode($shortcode_content);
+		$html .= "</p></div>";
+	}
 	$html .= "</div>";
 
 	return $html;
