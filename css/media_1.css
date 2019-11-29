@@ -858,4 +858,14 @@
     .contacts-section__map {
         height: 300px;
     }
+
+    .symptoms__item {
+        padding-left: 40px;
+    }
+
+    .symptoms__item::before {
+        left: 15px;
+        top: 17px;
+    }
+
 }
