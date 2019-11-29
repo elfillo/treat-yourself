@@ -16,7 +16,9 @@ function getTextBlock($atts, $shortcode_content = null) {
 
 	$html .= "<div class='service-inner__desc'>";
 	$html .= "<h2 class='service-inner__title'>{$params['title']}</h2>";
+	$html .= "<div class='text'><p>";
 	$html .= do_shortcode($shortcode_content);
+	$html .= "</div></p>";
 	$html .= "</div>";
 
 	return $html;
@@ -31,7 +33,7 @@ function getList($atts, $shortcode_content = null) {
 
 	$items = do_shortcode($shortcode_content);
 
-	$listContent = explode(',', $items);
+	$listContent = explode('/', $items);
 	$list = '';
 	foreach ($listContent as $item){
 		$list .= "<li class='symptoms__item'>".$item."</li>";
