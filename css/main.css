@@ -2359,7 +2359,6 @@ li {
 }
 
 .doctor-card__thumb {
-  overflow: hidden;
   height: 23.3125rem;
   position: relative;
   background-image: url(../img/svg/slide-pattern.svg);
@@ -2461,6 +2460,7 @@ li {
 
 /*---Begin team-inner---*/
 .team-inner {
+  min-height: 43.75rem;
   background: #9FE86B;
   padding: 2.5rem 0 0 0;
   position: relative;
@@ -2555,7 +2555,8 @@ li {
   background-position: center;
   background-repeat: no-repeat;
   width: 35.625rem;
-  height: 36.875rem;
+  max-height: 36.875rem;
+  height: calc(100vh - 8.125rem);
   /* height: 73vh; */
   /* position: sticky; */
   position: fixed;
@@ -2568,9 +2569,10 @@ li {
 }
 
 .doctor-avatar img {
-  width: 100%;
-  max-width: 28.125rem;
-  height: auto;
+  /* width: 100%; */
+  /* max-width: 28.125rem; */
+  height: 95%;
+  width: auto;
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -2673,15 +2675,12 @@ li {
   display: none;
   z-index: 30;
 }
-.service-inner__desc{
-    padding-bottom: 2.5rem;
-}
+
 .symptoms {
   counter-reset: li;
   padding: 0;
   list-style: none;
-  /*padding: 2.5rem 0 5rem;*/
-    padding-bottom: 2.5rem;
+  padding: 2.5rem 0 5rem;
 }
 
 .symptoms__item {
