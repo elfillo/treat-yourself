@@ -493,6 +493,24 @@
         border: none;
     }
 
+    .price__name {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .price {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .price__value {
+        margin-left: 0;
+    }
+
+    .price__btn {
+        margin-left: auto;
+    }
+
     .contacts-section__row {
         justify-content: flex-start;
     }
@@ -694,24 +712,6 @@
 
     .team-inner__doctor-avatar {
         padding: 0 20px;
-    }
-
-    .price {
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    }
-
-    .price__name {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .price__value {
-        margin-left: 0;
-    }
-
-    .price__btn {
-        margin-left: auto;
     }
 
     .contact-us {
