@@ -188,7 +188,7 @@ Template Name: Услуга
                                         <div class="review__text">
                                             <p><?php the_field('review_text', $review->ID)?></p>
                                         </div>
-
+		                                <?php if(!empty(get_field('review_photo', $review->ID))):?>
                                         <div class="review__gallery">
 	                                        <?php foreach (get_field('review_photo', $review->ID) as $img):?>
 		                                        <?php
@@ -200,6 +200,7 @@ Template Name: Услуга
                                                 </a>
 	                                        <?php endforeach;?>
                                         </div>
+                                        <?php endif;?>
                                     </div>
                                 </article>
                                 <?php endforeach;?>
