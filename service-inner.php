@@ -262,7 +262,7 @@ Template Name: Услуга
                 </div>
 
                 <!-- Begin float-block -->
-                <div class="float-block float-block_sticky js-sticky-block">
+                <div class="float-block float-block_sticky">
                     <div class="service-feedback">
                         <svg class="icon service-feedback__icon" width="70" height="70" viewBox="0 0 70 70">
                             <use xlink:href="<?php echo get_template_directory_uri() ?>/img/symbol_sprite.svg#icon-stethoscope"></use>
