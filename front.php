@@ -25,7 +25,7 @@ Template Name: Главная
                     <div class="swiper-slide carousel-section__slide" style="background-image: url(<?php echo wp_get_attachment_image_src($slide, 'full')[0]?>)">
                         <div class="container">
                             <h2 class="carousel-section__title">
-                                Многофункциональный <br>медицинский центр <br>с высокой экспертизой <br>в лечении лимфомы
+                                Многофункциональный <br>медицинский центр <br>с высокой экспертизой <br>в лечении лимфидемы
                             </h2>
                         </div>
                     </div>
