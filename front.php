@@ -98,7 +98,7 @@ Template Name: Главная
                             </div>
                         </div>
                     </div>
-                    <div class="sertificates__thumb"></div>
+                    <div class="sertificates__thumb"><img src="<?php echo get_template_directory_uri() ?>/img/static/L+2.png" alt=""></div>
                 </div>
             </div>
         </section>
