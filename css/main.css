@@ -1292,12 +1292,21 @@ li {
   cursor: pointer;
   text-align: center;
   padding: 0 3.4375rem;
+  position: relative;
+  -webkit-transition: 0.3s ease;
+
+  -o-transition: 0.3s ease;
+
+  transition: 0.3s ease;
 }
 
-.btn-fill:hover {}
+.btn-fill:hover {
+  background-position-y: 3.93rem;
+}
 
 .btn-fill:active {
   border-bottom-width: 0;
+  top: 0.1875rem;
 }
 
 /*---Begin burger-menu---*/
@@ -2297,13 +2306,28 @@ li {
 }
 
 .sertificates__thumb {
-  background-color: #9FE86B;
+  /* background-color: #9FE86B;
   background-size: cover;
   background-position: center;
-  background-image: url();
+  background-image: url(); */
   width: 100%;
-  max-width: 30.3125rem;
-  height: 29.3125rem;
+  max-width: 30rem;
+  height: 30rem;
+
+  overflow: hidden;
+  position: relative;
+}
+
+.sertificates__thumb img {
+  display: block;
+  height: 100%;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .sertificates__item {
