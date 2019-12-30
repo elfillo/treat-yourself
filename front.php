@@ -11,6 +11,12 @@ Template Name: Главная
     ));
     $doctors = query_posts(array(
         'post_type' => 'post_doctor',
+	    'meta_query' => array(
+		    array(
+			    'key' => '_thumbnail_id',
+			    'compare' => 'EXISTS'
+		    )
+	    )
     ));
 
     $slides = get_field('main_gallery', $post->ID);
@@ -25,7 +31,7 @@ Template Name: Главная
                     <div class="swiper-slide carousel-section__slide" style="background-image: url(<?php echo wp_get_attachment_image_src($slide, 'full')[0]?>)">
                         <div class="container">
                             <h2 class="carousel-section__title">
-                                Многофункциональный <br>медицинский центр <br>с высокой экспертизой <br>в лечении лимфидемы
+                                <?php echo get_post( $slide )->post_excerpt ;?>
                             </h2>
                         </div>
                     </div>

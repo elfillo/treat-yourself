@@ -733,11 +733,26 @@ function addPost(time, data) {
   request.send(JSON.stringify(body));
 }
 
-//active link
-/*
-$(function () {
-  $(".services-menu li a").each(function () {
-    window.location.href == this.href && $(this.parentNode).addClass("current");
+$(document).ready(function () {
+  $('#feedback_header').click(function (e) {
+      console.log('header fb');
+      $.ajax({
+        url: '/wp-admin/admin-ajax.php',
+        data: {
+          data: 'getHeaderForm',
+          action: 'get_header_form',
+        },
+        type: 'POST',
+        success: function (response) {
+          console.log(response, 'response');
+          $('#specializaciya').html(response);
+        },
+      });
+  });
 
-  })
-});*/
+  $('#close_feedback').click(function () {
+    location.reload();
+  });
+
+});
+

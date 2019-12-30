@@ -1,4 +1,22 @@
 <?php
+function getHeaderForm(){
+	if(isset($_POST['data'])){
+		$spec_list = get_pages(array(
+			'meta_key' => '_wp_page_template',
+			'meta_value' => 'service-inner.php'
+		));
+	}
+	foreach ($spec_list as $spec){
+		$sp = $spec->post_title.'|'. $spec->ID;
+		echo '<option value="'.$sp.'">';
+		echo $spec->post_title;
+		echo '</option>';
+	}
+	return;
+}
+add_action('wp_ajax_nopriv_get_header_form', 'getHeaderForm' );
+add_action('wp_ajax_get_header_form', 'getHeaderForm' );
+
 function getDoctors(){
 	print_r($_POST['data']);
 	$doctors = [];

@@ -47,7 +47,6 @@ if(isset($post) && $post->post_type == 'post_doctor'){
 	));
 }
 ?>
-
 <div class="review-pop-up" id="feedback">
     <!-- <div class="overlay show"></div> -->
     <div class="review-pop-up__inner">
@@ -155,7 +154,7 @@ if(isset($post) && $post->post_type == 'post_doctor'){
                 </div>
             </div>
         </div>
-        <button class="close review-pop-up__close">
+        <button class="close review-pop-up__close" id="close_feedback">
             <svg class="icon" width="42" height="42" viewBox="0 0 42 42">
                 <use xlink:href="<?php echo get_template_directory_uri() ?>/img/symbol_sprite.svg#icon-close"></use>
             </svg>

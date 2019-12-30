@@ -35,7 +35,13 @@ Template Name: Команда
             <ul class="row team-section__body">
                 <?php
                 $team = query_posts(array(
-                        'post_type' => 'post_doctor'
+                        'post_type' => 'post_doctor',
+                        'meta_query' => array(
+                            array(
+                                'key' => '_thumbnail_id',
+                                'compare' => 'EXISTS'
+                            )
+                        )
                 ));
                 ?>
                 <?php foreach ($team as $doctor):?>

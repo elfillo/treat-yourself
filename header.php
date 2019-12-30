@@ -97,7 +97,12 @@
                     <!-- End services-menu-->
 
                     <button class="make-an-appointment head-page__make-an-appointment" data-options='{"touch" : false}'
-                            data-fancybox data-src="#feedback">
+                             id="feedback_header"
+                            data-fancybox
+                            data-src="#feedback"
+                    >
+                        <!--data-fancybox
+                        data-src="#feedback"-->
                         <svg class="icon" width="14" height="14" viewBox="0 0 16 16">
                             <use xlink:href="<?php echo get_template_directory_uri() ?>/img/symbol_sprite.svg#icon-time"></use>
                         </svg>
