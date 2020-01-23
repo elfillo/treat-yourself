@@ -409,7 +409,17 @@
                             <use xlink:href="<?php echo get_template_directory_uri() ?>/img/symbol_sprite.svg#icon-time"></use>
                         </svg>
                         Режим работы -
-                        10<sup>00</sup>-&nbsp;23<sup>00</sup>
+	                    <?php
+	                    $start = get_post_meta(21, 'contacts_start', true);
+	                    $startH = explode(':', $start)[0];
+	                    $startM = explode(':', $start)[1];
+	                    $finish = get_post_meta(21, 'contacts_finish', true);
+	                    $finishH = explode(':', $finish)[0];
+	                    $finishM = explode(':', $finish)[1];
+	                    ?>
+	                    <?php
+	                    echo $startH.'<sup>'.$startM.'</sup>'.' - '.$finishH . '<sup>'.$finishM.'</sup>';
+	                    ?>
                     </div>
 
                     <div class="socials contacts-section__socials">
@@ -419,7 +429,7 @@
                             </svg>
                         </a>
 
-                        <a href="/" class="socials__item socials__item_inst">
+                        <a href="https://instagram.com/lechis_medcenter?igshid=af3ytjgsw3vt" class="socials__item socials__item_inst">
                             <svg class="icon" viewBox="0 0 80 80">
                                 <use xlink:href="<?php echo get_template_directory_uri() ?>/img/symbol_sprite.svg#icon-inst"></use>
                             </svg>

@@ -242,12 +242,12 @@ Template Name: Услуга
                         </div>
                         <div class="contact-us__socials">
                             <div class="contact-us__socials-wrapper">
-                                <a href="#" class="contact-us__soc">
+                                <a href="https://api.whatsapp.com/send?phone=79679603458" class="contact-us__soc">
                                     <svg class="icon" width="40" height="40" viewBox="0 0 40 40">
                                         <use xlink:href="<?php echo get_template_directory_uri() ?>/img/symbol_sprite.svg#icon-whats-app"></use>
                                     </svg>
                                 </a>
-                                <a href="#" class="contact-us__soc">
+                                <a href="viber://chat?number=+79679603458" class="contact-us__soc">
                                     <svg class="icon" width="40" height="40" viewBox="0 0 40 40">
                                         <use xlink:href="<?php echo get_template_directory_uri() ?>/img/symbol_sprite.svg#icon-viber"></use>
                                     </svg>
