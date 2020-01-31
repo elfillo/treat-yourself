@@ -1309,6 +1309,7 @@ li {
   top: 0.1875rem;
 }
 
+
 /*---Begin burger-menu---*/
 .burger-menu {
   display: none;
@@ -1612,6 +1613,7 @@ li {
 
 .text {
   font-size: 1.125rem;
+  line-height: 1.4em;
 }
 
 .row {
@@ -2277,6 +2279,7 @@ li {
 /*---Begin sertificates ---*/
 .sertificates {
   padding: 3.125rem 0 6.25rem;
+  overflow: hidden;
 }
 
 .sertificates__row {

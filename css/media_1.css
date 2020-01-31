@@ -53,6 +53,10 @@
         padding: 0 15px;
     }
 
+    .btn-fill:active{
+        top: auto
+    }
+
     .review-pop-up__close svg {
         fill: #343434;
     }
